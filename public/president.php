@@ -19,7 +19,9 @@
         }
         else
         {
-            // do sql things
+            $id = $_SESSION["id"];
+            $vote = $_POST["vote"];
+            $mysqli -> query("UPDATE voters SET president = '$vote' WHERE id = '$id'");
             redirect("/gensec.php");
         }
     }
