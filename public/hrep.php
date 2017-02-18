@@ -60,7 +60,7 @@
         {
             $vote = $_POST["vote"];
             $mysqli -> query("UPDATE voters SET hrep = '$vote' WHERE id = '$id'");
-            redirect("/logout.php");
+            redirect("thanks.php");
         }
     }
 

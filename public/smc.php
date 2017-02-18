@@ -23,7 +23,7 @@
         {
             $vote = $_POST["vote"];
             $mysqli -> query("UPDATE voters SET smc = '$vote' WHERE id = '$id'");
-            redirect("/hrep.php");
+            redirect("hrep.php");
         }
     }
 

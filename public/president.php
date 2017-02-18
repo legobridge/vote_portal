@@ -23,7 +23,7 @@
         {
             $vote = $_POST["vote"];
             $mysqli -> query("UPDATE voters SET president = '$vote' WHERE id = '$id'");
-            redirect("/gensec.php");
+            redirect("gensec.php");
         }
     }
 

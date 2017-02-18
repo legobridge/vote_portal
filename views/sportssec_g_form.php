@@ -1,6 +1,6 @@
 <h1> Sports Secretary (Girls) </h1>
 <form action="sportssec.php" method="post">
-	<div class="form-group">
+    <div class="form-group">
 		<select name="vote">
 			<option selected disabled hidden>Select Candidate</option>
 		    <option value="Apoorva Iyer">Apoorva Iyer</option>

@@ -32,7 +32,7 @@
         {
             $vote = $_POST["vote"];
             $mysqli -> query("UPDATE voters SET cultsec = '$vote' WHERE id = '$id'");
-            redirect("/sportssec.php");
+            redirect("sportssec.php");
         }
     }
 
