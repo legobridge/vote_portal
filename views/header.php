@@ -31,7 +31,6 @@
         <div class="container">
 
             <div id="top">
-                <div>
-                    <a href="/"><img alt="BITS Pilani, Hyderabad Campus" src="/img/bphc_logo.png"/></a>
-                    <a href="/"><img alt="The Election Commission" src="/img/ec_logo.png"/></a>
+                <a href="/"><img alt="BITS Pilani, Hyderabad Campus" src="/img/bphc_logo.png"/></a>
+                <a href="/"><img alt="The Election Commission" src="/img/ec_logo.png"/></a>
             <div id="middle">

@@ -4,12 +4,21 @@
     require("../includes/config.php");
 
     $id = $_SESSION["id"];
-    
+    $bhavan_row = ($mysqli -> query("SELECT bhavan FROM voters WHERE id = '$id'")) -> fetch_assoc();
+    $bhavan = $bhavan_row["bhavan"];
+
     // if user reached page via GET (as by clicking a link or via redirect)
     if ($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // render form
-        render("gensec_form.php", ["title" => "General Secretary"]);
+        if ($bhavan === "MM" || $bhavan === "M")
+        {
+            render("sportssec_g_form.php", ["title" => "Sports Secretary (Girls)"]);
+        }
+        else
+        {
+            render("sportssec_b_form.php", ["title" => "Sports Secretary (Boys)"]);
+        }
     }
 
     // else if user reached page via POST (as by submitting a form via POST)
@@ -22,8 +31,8 @@
         else
         {
             $vote = $_POST["vote"];
-            $mysqli -> query("UPDATE voters SET gensec = '$vote' WHERE id = '$id'");
-            redirect("/cultsec.php");
+            $mysqli -> query("UPDATE voters SET sportssec = '$vote' WHERE id = '$id'");
+            redirect("/smc.php");
         }
     }
 

@@ -1,11 +1,10 @@
-<h1> General Secretary </h1>
-<form action="gensec.php" method="post">
+<h1> Sports Secretary (Boys) </h1>
+<form action="sportssec.php" method="post">
 	<div class="form-group">
 		<select name="vote">
 			<option selected disabled hidden>Select Candidate</option>
 		    <option value="Aditya Iyer">Aditya Iyer</option>
-		    <option value="Apoorva">Apoorva</option>
-		    <option value="NotA">NotA</option>
+		    <option value="NotA (Boys)">NotA</option>
 		</select>
     </div>
     <div class="form-group">

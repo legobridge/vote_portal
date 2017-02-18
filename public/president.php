@@ -2,11 +2,13 @@
 
     // configuration
     require("../includes/config.php");
+    
+    $id = $_SESSION["id"];
 
     // if user reached page via GET (as by clicking a link or via redirect)
     if ($_SERVER["REQUEST_METHOD"] == "GET")
     {
-        // else render form
+        // render form
         render("president_form.php", ["title" => "President"]);
     }
 
@@ -19,7 +21,6 @@
         }
         else
         {
-            $id = $_SESSION["id"];
             $vote = $_POST["vote"];
             $mysqli -> query("UPDATE voters SET president = '$vote' WHERE id = '$id'");
             redirect("/gensec.php");

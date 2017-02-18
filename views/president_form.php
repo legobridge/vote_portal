@@ -3,10 +3,8 @@
 	<div class="form-group">
 		<select name="vote">
 			<option selected disabled hidden>Select Candidate</option>
-		    <option value="1">Abhinav Etireddy</option>
-		    <option value="2">Eti</option>
-		    <option value="3">Reddy</option>
-		    <option value="-1">NotA</option>
+		    <option value="Abhinav Etireddy">Abhinav Etireddy</option>
+		    <option value="NotA">NotA</option>
 		</select>
     </div>
     <div class="form-group">
