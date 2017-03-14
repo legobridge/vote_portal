@@ -33,15 +33,15 @@
         {
             // first (and only) row
             $row = $res -> fetch_assoc();
-            // compare hash of user's input against hash that's in database
             //echo $hashed_password."\n";
             //echo $row["pass"]."\n";
+            // compare hash of user's input against hash that's in database
             if ($hashed_password === $row["pass"])
             {
                 // remember that user's now logged in by storing user's ID in session
                 $_SESSION["id"] = $row["id"];
 
-                // redirect to portfolio
+                // redirect to president voting page
                 redirect("/");
             }
         }
