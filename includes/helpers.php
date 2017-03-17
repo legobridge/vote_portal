@@ -72,10 +72,6 @@
             require("../views/header.php");
             require("../views/{$view}");
             require("../views/footer.php");
-            if ($view === "thanks.php")
-            {
-            	logout();
-            }
             exit;
         }
 
