@@ -24,7 +24,8 @@
         }
 
         // hash id_no and password
-        $hashed_id = hash("sha256", $_POST["id_no"]);
+        $id_no = strtoupper($_POST["id_no"]);
+        $hashed_id = hash("sha256", $id_no);
         $hashed_password = hash("sha256", $_POST["password"]);
         // query database for user
         $res = $mysqli -> query("SELECT * FROM voters WHERE id_no = '$hashed_id'");
