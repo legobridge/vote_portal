@@ -1,2 +1,2 @@
 CREATE DATABASE `elections`
-CREATE TABLE `elections`.`voters` ( `id` INT NOT NULL AUTO_INCREMENT , `id_no` VARCHAR(200) NOT NULL , `pass` VARCHAR(200) NOT NULL , `bhavan` VARCHAR(200) NOT NULL , `president` VARCHAR(200) NOT NULL , `gensec` VARCHAR(200) NOT NULL , `cultsec` VARCHAR(200) NOT NULL , `sportssec` VARCHAR(200) NOT NULL , `smc` VARCHAR(200) NOT NULL , PRIMARY KEY (`id`), FULLTEXT `id_no` (`id_no`(200))) ENGINE = InnoDB;
+CREATE TABLE `elections`.`voters` ( `id` INT NOT NULL AUTO_INCREMENT , `pass` VARCHAR(200) NOT NULL , `bhavan` VARCHAR(200) NOT NULL , `president` VARCHAR(200) NOT NULL , `gensec` VARCHAR(200) NOT NULL , `cultsec` VARCHAR(200) NOT NULL , `sportssec` VARCHAR(200) NOT NULL , `smc` VARCHAR(200) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

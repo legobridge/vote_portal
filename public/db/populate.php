@@ -12,10 +12,9 @@
             while(!feof($file))
             {
                 $row = fgetcsv($file);
-                $id_no = hash("sha256", $row[0]);
-                $pass = hash("sha256", $row[1]);
-                $bhavan = $row[2];
-                $qu = "INSERT INTO `voters` (`id_no`, `pass`, `bhavan`) VALUES ('". $id_no . "', '" . $pass . "', '" . $bhavan . "')";
+                $pass = hash("sha256", $row[0]);
+                $bhavan = $row[1];
+                $qu = "INSERT INTO `voters` (`pass`, `bhavan`) VALUES ('" . $pass . "', '" . $bhavan . "')";
                 $mysqli -> query($qu);
             }
             echo "Population Successful";
@@ -24,5 +23,5 @@
         {
             echo "Please Specify a Valid File Name";
         }
-    }    
+    }
 ?>
