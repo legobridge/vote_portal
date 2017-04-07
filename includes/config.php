@@ -7,7 +7,7 @@
     // requirements
     require("helpers.php");
 
-    $mysqli = new mysqli("localhost", "nickfury95", "v1kCjsvLYytrBTGV", "elections");
+    $mysqli = new mysqli("localhost", "election_commission", "SuperSecurePassword", "elections");
 
     // enable sessions
     session_start();

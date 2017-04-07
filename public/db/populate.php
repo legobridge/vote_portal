@@ -18,6 +18,7 @@
                 $qu = "INSERT INTO `voters` (`id_no`, `pass`, `bhavan`) VALUES ('". $id_no . "', '" . $pass . "', '" . $bhavan . "')";
                 $mysqli -> query($qu);
             }
+            echo "Population Successful";
         }
         else
         {
