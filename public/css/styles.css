@@ -12,10 +12,17 @@
     margin-bottom: 15px;
 }
 
-img
+#bphc_logo
 {
     margin: 3%;
-    max-width: 18%;
+    max-width: 23%;
+    height: auto;
+}
+
+#ec_logo
+{
+	margin: 3%;
+    max-width: 30%;
     height: auto;
 }
 
