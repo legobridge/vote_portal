@@ -2,7 +2,7 @@
 <form action="president.php" method="post">
 	<div class="radio">
 	    <div class="opt">
-            <label><input type="radio" name="vote" value="Abhinav Etireddy">Abhinav Etireddy</label>
+            <label><input type="radio" name="vote" value="Abhinav Eittireddy">Abhinav Eittireddy</label>
         </div>
         <div class="opt">
 	       <label><input type="radio" name="vote" value="NotA">NotA</label>

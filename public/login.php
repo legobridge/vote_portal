@@ -14,41 +14,32 @@
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // validate submission
-        if (empty($_POST["id_no"]))
-        {
-            apologize("You must provide your ID Number.");
-        }
-        else if (empty($_POST["password"]))
+        if (empty($_POST["password"]))
         {
             apologize("You must provide your password.");
         }
 
-        // hash id_no and password
-        $id_no = strtoupper($_POST["id_no"]);
-        $hashed_id = hash("sha256", $id_no);
+        // hash password
         $hashed_password = hash("sha256", $_POST["password"]);
         // query database for user
-        $res = $mysqli -> query("SELECT * FROM voters WHERE id_no = '$hashed_id'");
+        $res = $mysqli -> query("SELECT * FROM voters WHERE pass = '$hashed_password'");
         // if we found user, check password
-        if ($res != FALSE)
+
+
+        if ($res -> num_rows > 0)
         {
             // first (and only) row
             $row = $res -> fetch_assoc();
-            //echo $hashed_password."\n";
-            //echo $row["pass"]."\n";
-            // compare hash of user's input against hash that's in database
-            if ($hashed_password === $row["pass"])
-            {
-                // remember that user's now logged in by storing user's ID in session
-                $_SESSION["id"] = $row["id"];
 
-                // redirect to president voting page
-                redirect("/");
-            }
+            // set session id
+            $_SESSION["id"] = $row["id"];
+
+            // redirect to president voting page
+            redirect("/");
         }
 
         // else apologize
-        apologize("Invalid username and/or password.");
+        apologize("Invalid password.");
     }
 
 ?>

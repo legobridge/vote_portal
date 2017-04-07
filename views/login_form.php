@@ -1,9 +1,6 @@
 <form action="login.php" method="post">
     <fieldset>
         <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" name="id_no" placeholder="ID Number" type="text"/>
-        </div>
-        <div class="form-group">
             <input class="form-control" name="password" placeholder="Password" type="password"/>
         </div>
         <div class="form-group">
