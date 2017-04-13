@@ -31,14 +31,21 @@
             // first (and only) row
             $row = $res -> fetch_assoc();
 
-            // set session id
-            $_SESSION["id"] = $row["id"];
+            if ($row["president"] !== "Didn\'t Vote")
+            {
+            	apologize("User Has Already Voted");
+            }
+            else
+            {
+            	// set session id
+	            $_SESSION["id"] = $row["id"];
 
-            // redirect to president voting page
-            redirect("/");
+	            // redirect to president voting page
+	            redirect("/");
+            }
         }
 
-        // else apologize
+        // else if password not found, apologize
         apologize("Invalid password.");
     }
 
