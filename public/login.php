@@ -30,8 +30,7 @@
         {
             // first (and only) row
             $row = $res -> fetch_assoc();
-
-            if ($row["president"] !== "Didn\'t Vote")
+            if ($row["president"] != "Didn't Vote")
             {
             	apologize("User Has Already Voted");
             }
