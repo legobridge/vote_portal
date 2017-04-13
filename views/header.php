@@ -18,8 +18,6 @@
 
 	    <link href="/css/styles.css" rel="stylesheet">
 
-        <script src="/js/scripts.js"></script>
-
         <?php if (isset($title)): ?>
             <title>The General Elections : <?= htmlspecialchars($title) ?></title>
         <?php else: ?>

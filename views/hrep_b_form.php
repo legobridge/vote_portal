@@ -9,12 +9,6 @@
         </div>
     </div>
     <div>
-        <span>
-            <button class="btn btn-default" onclick="goBack()">
-                <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
-                Back
-            </button>
-        </span>
         <div class="radio">
             <button class="btn btn-default" type="submit">
                 <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
