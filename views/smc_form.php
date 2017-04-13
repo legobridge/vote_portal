@@ -42,7 +42,7 @@
         <div class="radio">
             <button class="btn btn-default" type="submit">
                 <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
-                Next
+                Finish Voting
             </button>
         </div>
     </div>
